@@ -5,9 +5,9 @@ import StarWarsLogo from "../img/starWarsLogo.png";
 function NavBar() {
   return (
     <Fragment>
-      <nav className="ContainerStarWarsLogo">
-        <div>
-          <div>
+      <nav>
+        <div className="ContainerUp">
+          <div className="boxStarWarsLogo">
             <img
               className="StarWarsLogo"
               src={StarWarsLogo}
@@ -19,8 +19,7 @@ function NavBar() {
             <button>SINGUP</button>
           </div>
         </div>
-        <div className="bordeMenuPageTop"></div>
-        <div className="menuPage">
+        <div className="bordeMenuPage">
           <button>
             <Link to="/">HOME</Link>
           </button>
@@ -28,7 +27,8 @@ function NavBar() {
             <Link to="/StartShips">STARTSHIPS</Link>
           </button>
         </div>
-        <div className="bordeMenuPageBottom"></div>
+
+        {/* <div className="bordeMenuPageBottom"></div> */}
       </nav>
     </Fragment>
   );

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import SelectedStartShip from "./SelectedStartShip";
 
 function ListShip() {
   const [list, setList] = useState([]);
@@ -38,7 +40,12 @@ function ListShip() {
 
   panelShips = list.map((item, index) => (
     <div key={index} className="panelShips">
-      <h3>{item.name}</h3>
+      <div>
+        <h3 onClick={() => SelectedStartShip({ item, index })}>{item.name}</h3>
+        <button onClick={() => SelectedStartShip({ item, index })}>
+          <Link to={`/StartShips/${item.name}`}>+</Link>
+        </button>
+      </div>
       <p>{item.model}</p>
     </div>
   ));

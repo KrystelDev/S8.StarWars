@@ -27,8 +27,6 @@ function NavBar() {
             <Link to="/StartShips">STARTSHIPS</Link>
           </button>
         </div>
-
-        {/* <div className="bordeMenuPageBottom"></div> */}
       </nav>
     </Fragment>
   );

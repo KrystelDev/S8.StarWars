@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import NavBar from "../../components/NavBar";
 import ListShips from "../../components/ListShips";
+import NavBar from "../../components/NavBar";
 
-function Home() {
+function StartShips() {
   return (
     <Fragment>
       <NavBar></NavBar>
@@ -12,4 +12,5 @@ function Home() {
     </Fragment>
   );
 }
-export default Home;
+
+export default StartShips;

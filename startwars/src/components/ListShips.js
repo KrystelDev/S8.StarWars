@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import SelectedStartShip from "./SelectedStartShip";
 
 function ListShip() {
   const [list, setList] = useState([]);
@@ -10,6 +9,7 @@ function ListShip() {
   );
   let panelShips;
 
+  //Array StartShip
   useEffect(() => {
     axios({
       url: nextPage,
@@ -24,13 +24,13 @@ function ListShip() {
       });
   }, [setList, setNextPage]);
 
+  //Onlick: more Starship
   const handelRetriveMoreShips = () => {
     axios({
       url: nextPage,
     })
       .then((response) => {
         setList((previus) => previus.concat(response.data.results));
-        console.log(list);
         setNextPage(response.data.next);
       })
       .catch((error) => {
@@ -38,18 +38,23 @@ function ListShip() {
       });
   };
 
+  list.map((item, index) => (item.id = index + 2));
+
   panelShips = list.map((item, index) => (
-    <div key={index} className="panelShips">
+    <div key={item.id} className="panelShips">
+      {item.id}
       <div>
-        <h3 onClick={() => SelectedStartShip({ item, index })}>{item.name}</h3>
-        <button onClick={() => SelectedStartShip({ item, index })}>
-          <Link to={`/StartShips/${item.name}`}>+</Link>
+        <h3>{item.name}</h3>
+        <button>
+          <Link to={`/detall/${item.name}`} state={item}>
+            +
+          </Link>
         </button>
       </div>
       <p>{item.model}</p>
     </div>
   ));
-  console.log(list);
+  //console.log(list);
 
   return (
     <div>

@@ -1,18 +1,31 @@
-import { Fragment } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
+import { Fragment } from "react";
+import styled from "styled-components";
 
-function SelectedStartShip({ item, index }) {
-  console.log("esto es la ficha de la nave: " + item.name);
+function SelectedStartShip() {
   const { name } = useParams();
-  const thisShip = item;
+  const location = useLocation();
+  const baseURL = "https://starwars-visualguide.com/assets/img/";
+  let defaultURL = "big-placeholder.jpg";
+
+  let Content = styled.div`
+    background-image: url(${baseURL}starships/${location.state.id}.jpg),
+      url(${baseURL}${defaultURL});
+    height: 40vh;
+    background-repeat: no-repeat;
+  `;
+
+  console.log("name", name);
+  console.log("state", location.state);
 
   return (
     <Fragment>
       <NavBar></NavBar>
       <div>
-        <h1>{thisShip.name}</h1>
-        <p>Prueba: {thisShip.model}</p>
+        <Content></Content>
+        <h1>{name}</h1>
+        <p>Prueba: {location.state.name}</p>
       </div>
     </Fragment>
   );

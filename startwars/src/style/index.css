@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  color: #7d7d7d;
 }
 
 code {
@@ -15,7 +16,6 @@ code {
 
 /********************************* All pages *********************************/
 main {
-  color: #7d7d7d;
   overflow-y: scroll;
   padding-bottom: 20%;
 }

@@ -1,14 +1,18 @@
 import { Fragment } from "react";
 import NavBar from "../../components/NavBar";
+import ReactPlayer from "react-player";
 
 function Home() {
   return (
     <Fragment>
       <NavBar></NavBar>
       <main>
-        <ul>
-          <li>HOME</li>
-        </ul>
+        <ReactPlayer
+          url={"https://www.youtube.com/watch?v=SBLSTf7IgA0"}
+          className="react-player"
+          playing
+          controls={true}
+        />
       </main>
     </Fragment>
   );

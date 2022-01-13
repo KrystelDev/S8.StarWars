@@ -41,17 +41,11 @@ function ListShip() {
   list.map((item, index) => (item.id = index + 2));
 
   panelShips = list.map((item, index) => (
-    <div key={item.id} className="panelShips">
-      {item.id}
-      <div>
+    <div key={index} className="panelShips">
+      <Link to={`/detall/${item.name}`} state={item}>
         <h3>{item.name}</h3>
-        <button>
-          <Link to={`/detall/${item.name}`} state={item}>
-            +
-          </Link>
-        </button>
-      </div>
-      <p>{item.model}</p>
+        <p>{item.model}</p>
+      </Link>
     </div>
   ));
   //console.log(list);

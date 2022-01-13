@@ -19,10 +19,12 @@ const FooterFlex = styled.div`
 const Signature = styled.img`
   height: 8vh;
   margin-right: 1rem;
+  padding-top: 1 rem;
 `;
 
 const P = styled.p`
   padding-left: 1rem;
+  padding-top: 3 rem;
 `;
 
 const Footer = ({ currantYear }) => {

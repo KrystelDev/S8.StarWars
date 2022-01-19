@@ -16,7 +16,9 @@ function NavBar() {
           </div>
           <div className="logins">
             <button>LOGIN</button>
-            <button>SINGUP</button>
+            <button>
+              <Link to="/SignUp">SIGN UP</Link>
+            </button>
           </div>
         </div>
         <div className="bordeMenuPage">

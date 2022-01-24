@@ -107,7 +107,7 @@ main {
   position: absolute;
   left: 0;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 40px 40px 0;
   width: 300px;
 }
 
@@ -143,13 +143,12 @@ input[type="password"]:focus {
 
 button[type="submit"] {
   position: absolute;
-  left: 40%;
-  bottom: 5%;
+  left: 80%;
   width: 120px;
   height: 32px;
   background: #16a085;
   border: none;
-  border-radius: 2px #7d7d7d;
+  border-radius: 0.5rem;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -190,7 +189,7 @@ button[type="submit"]:active {
   right: 0;
   width: 55%;
   box-sizing: border-box;
-  padding: 45px;
+  padding: 45px 45px 0;
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;

@@ -13,7 +13,7 @@ function SignUp() {
           <FromSignUp />
           <div className="or">OR</div>
           <DynamicSingUp />
-          <button type="submit">Sign me up</button>
+          {/* <button type="submit">Sign me up</button> */}
         </div>
       </main>
     </Fragment>

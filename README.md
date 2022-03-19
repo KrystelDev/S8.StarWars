@@ -1,2 +1,29 @@
 # S8.StarWars
-The website you have to develop is an information website about Star Wars ships! the list of ships will have to be shown, and when you click on one you will have the details of it.
+
+Este proyecto es el típico de una prueba técnica: consumo de datos de API, mostrarlos por pantalla en un listado, e implementar el detalle de cada item del listado.
+La web que he desarrollar es una web de información sobre las naves de Star Wars. Muestraro el listado de naves, y al clicar en una se ve los detalles de ésta.
+
+## Visualización Home:
+
+<img
+    src="./src/img/LayoutHome.png"
+    width="700px"
+/>
+
+## Visualización de naves:
+
+<img
+    src="./src/img/LayoutListado.png"
+    width="700px"
+/>
+<img
+    src="./src/img/LayoutDetalle.png"
+    width="700px"
+/>
+
+## Visualización Sing Up:
+
+<img
+    src="./src/img/LayoutSignUp.png"
+    width="700px"
+/>

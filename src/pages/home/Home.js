@@ -8,7 +8,7 @@ function Home() {
       <NavBar></NavBar>
       <main>
         <ReactPlayer
-          url={"https://www.youtube.com/watch?v=SBLSTf7IgA0"}
+          url="youtube.com/watch?v=SBLSTf7IgA0"
           className="react-player"
           playing
           controls={true}

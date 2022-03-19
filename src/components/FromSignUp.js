@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 // more info: https://bluuweb.github.io/react/formularios/#react-hook-form
@@ -7,31 +7,22 @@ const FromSignUp = () => {
   const [user, setUser] = useLocalStorage();
   const [listUser, setListUser] = useState([]);
 
-  // 2. FALTA: un useEffect leyendo localStorage y haga console.log
-  // useEffect(() => {
-  //   const guardado = localStorage.getItem("listUser");
-  //   console.log("LG Listado de usuarios: ", JSON.parse(guardado));
-  // }, [listUser]);
-  useEffect(() => {
-    console.log("Último usuario registrado: ", user);
-  }, [user]);
-
-  // 3. Funciones
+  // 2. Funciones
   // handleInputChange: modifica el state a cada cambio de los inputs
   function handleInputChange(element) {
     setUser({ ...user, [element.target.name]: element.target.value });
   }
 
-  // handleSubmitUserData: guarda en localstorage
+  //3. handleSubmitUserData: guarda en localstorage
   function handleSubmitUserData(event) {
     event.preventDefault();
     // Objetivo: pintar por consola el user / guardar en localstorage
 
-    // 1. Pintar por consola el user
+    // 3.1. Pintar por consola el user
     console.log("Guardando usuario", user);
     setListUser([...listUser, user]);
 
-    // 2. Guardar el localstorage
+    // 3.2. Guardar el localstorage
     localStorage.setItem("listUser", JSON.stringify(listUser));
   }
 

@@ -24,6 +24,9 @@ const FromSignUp = () => {
 
     // 3.2. Guardar el localstorage
     localStorage.setItem("listUser", JSON.stringify(listUser));
+
+    // 3.3 Clean value
+    event.target.reset();
   }
 
   // Render / return
